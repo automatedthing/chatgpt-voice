@@ -5,7 +5,7 @@ export default function useVoices() {
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
 
   const defaultVoice = voices.find(
-    (voice) => voice.default && voice.lang.startsWith('en-'),
+    (voice) => voice.default && voice.lang.startsWith('id-'),
   );
 
   // Display voices when they become available

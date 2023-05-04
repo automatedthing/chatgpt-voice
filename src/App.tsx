@@ -99,16 +99,10 @@ function App() {
 
   const availableVoices = useMemo(() => {
     const englishTypes = new Map();
-    englishTypes.set('en-AU', 'English (Australia)');
-    englishTypes.set('en-CA', 'English (Canada)');
-    englishTypes.set('en-GB', 'English (United Kingdom)');
-    englishTypes.set('en-IE', 'English (Ireland)');
-    englishTypes.set('en-IN', 'English (India)');
-    englishTypes.set('en-NZ', 'English (New Zealand)');
-    englishTypes.set('en-US', 'English (United State)');
+    englishTypes.set('id-ID', 'English (Australia)');    
 
     const localEnglishVoices = voices.filter(
-      (voice) => voice.localService && voice.lang.startsWith('en-'),
+      (voice) => voice.localService && voice.lang.startsWith('id-'),
     );
 
     const result: VoiceMappings = {};
@@ -122,6 +116,7 @@ function App() {
       }
       result[label].push(voice);
     }
+    console.log(result);
     return result;
   }, [voices]);
 
